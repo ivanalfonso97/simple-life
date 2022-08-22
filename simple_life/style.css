@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.6;
+}
+
+/* =================
+Typography
+================= */
+
+h1,
+.article-title,
+.widget-title,
+.section-title {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    font-size: 2rem;
+    margin: 0;
+}
+
+nav a, 
+.subtitle,
+.article-read-more,
+.widget-title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.article-title {
+    font-size: 1.5rem;
+}
+
+.article-featured .article-title {
+    margin: 1em 0;
+}
+
+.subtitle, 
+.article-read-more {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    color: #1792D2;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.article-info,
+.article-body {
+    font-family: 'Ubuntu';
+    color: #707070;
+    font-weight: 300;
+}
+
+.article-info {
+    size: 0.875rem;
+    margin: 2rem 0 0 0;
+}
+
+.article-body {
+    font-size: 1.125rem;
+}
+
+.article-read-more {
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+    color: #143774;
+    text-decoration: underline;
+}
+
+.widget-title,
+.small-title {
+    font-size: 1.125rem;
+}
+
+.widget-title {
+    font-family: 'Ubuntu';
+    font-weight: bold;
+}
+
+.small-title {
+    line-height: 1.4;
+}
+
+.widget-body {
+    color: #143774;
+    font-size: 0.875rem;
+}
+
+.section-title {
+    color: #1792D2;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.link {
+    color: #1792D2;
+}
+
+.link:hover,
+.link:focus {
+    color: #143774;
+}
+
+/* =================
+Layout
+================= */
+
+header {
+    background: #F8F8F8;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* navigation */
+
+.container-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0.5em 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #707070;
+    font-weight: 700;
+    padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #1792D2
+}
+
+.current-page {
+    border-bottom: 2px solid #707070;
+}
+
+.current-page:hover,
+.current-page:focus {
+    color: #707070;
+}
+
+@media (min-width: 675px) {
+    .container-nav {
+        flex-direction: row;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li {
+        margin-left: 2rem;
+    }
+}
+
+
+/* body */
+
+.container-body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 3rem auto;
+}
+
+main {
+    /* width: 67%; */
+    width: 100%;
+}
+
+.sidebar {
+    /* width: 27%; */
+    width: 100%;
+} 
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.article-featured {
+    border-bottom: #707070 1px solid;
+    padding-bottom: 2em;
+}
+
+.article-recent {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 1em 0;
+    justify-content: space-between;
+}
+
+/* side content */
+
+.sidebar-widget {
+    border: 20px solid #EBEBEB;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.sidebar-widget img {
+    margin-bottom: 1.5em;
+}
+
+.widget-title {
+    margin-bottom: 1.5em;
+}
+
+.widget-recent-post {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 1.5em 0;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #707070;
+}
+
+.widget-recent-post:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+@media (min-width: 675px) {
+    .container-body {
+        flex-direction: row;
+    }
+
+    main {
+        width: 67%;
+    }
+    
+    .sidebar {
+        width: 27%;
+        min-width: 200px;
+        margin-left: 1em;
+    }
+
+    .article-featured {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-featured .article-title {
+        order: 0;
+        margin-bottom: 0.5em;
+    }
+
+    .article-featured img {
+        order: -2;
+    }
+
+    .article-featured .article-info {
+        order: -1;
+    }
+
+    .article-recent {
+        flex-direction: row-reverse;
+    }
+
+    .article-recent-secondary {
+        width: 28%;
+    }
+    
+    .article-recent-main {
+        width: 68%;
+    }
+
+    .article-featured .article-image {
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    .article-recent .article-image {
+        width: 100%;
+        min-height: 250px;
+        object-fit: cover;
+    }
+}
+
+footer {
+    background: #143774;
+    color: white;
+    padding: 3em;
+    text-align: center;
+}
